@@ -1,0 +1,124 @@
+/* ====== CART PAGE ====== */
+.cart-page {
+  background: linear-gradient(180deg, #fff, #fafafa);
+  min-height: auto;
+  padding: 25px 0 30px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.cart-page .container {
+  margin-bottom: 0 !important;
+}
+
+/* ====== TABLE ====== */
+.cart-list {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+/* ====== SẢN PHẨM TRONG GIỎ ====== */
+.cart-img {
+  width: 90px;           /* ✅ co lại ảnh nhỏ gọn */
+  height: 90px;          /* giữ tỉ lệ vuông */
+  object-fit: cover;     /* ✅ không méo ảnh */
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.cart-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.3;
+  max-width: 200px;      /* ✅ tránh text dài tràn */
+  word-break: break-word;
+}
+
+/* ====== SỐ LƯỢNG ====== */
+.qty-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.qty-controls button {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.qty-value {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ====== TÓM TẮT ĐƠN HÀNG ====== */
+.cart-summary {
+  border-radius: 10px;
+  background: #fff;
+  transition: all 0.3s ease;
+  padding: 20px 18px !important;
+  margin-bottom: 0 !important;
+}
+
+.cart-summary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.06);
+}
+
+.cart-summary button {
+  background: linear-gradient(90deg, #ff3d3d, #ff6b6b);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.cart-summary button:hover {
+  background: linear-gradient(90deg, #ff6b6b, #ff3d3d);
+  transform: translateY(-1px);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .cart-page {
+    padding: 20px 0 25px;
+  }
+
+  .cart-summary {
+    margin-top: 15px;
+  }
+
+  .cart-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cart-name {
+    max-width: 150px;
+  }
+}
+.cart-main-img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.qty-controls button {
+  min-width: 32px;
+}
+
+.cart-page .card {
+  transition: 0.2s;
+}
+
+.cart-page .card:hover {
+  transform: translateY(-2px);
+}

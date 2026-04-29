@@ -1,0 +1,189 @@
+/* ===== PAGE CONTAINER ===== */
+.checkout-page {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f8f9fa;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* ===== FORM CARD ===== */
+.checkout-card {
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.checkout-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-card h5 {
+  color: #dc3545;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ===== INPUTS ===== */
+.checkout-card select,
+.checkout-card input,
+.checkout-card textarea {
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.checkout-card select:focus,
+.checkout-card input:focus,
+.checkout-card textarea:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.18rem rgba(220, 53, 69, 0.25);
+}
+
+.checkout-card label {
+  font-size: 15.5px;
+  font-weight: 500;
+}
+
+/* ===== PAYMENT SECTION ===== */
+.payment-options {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  background: #fafafa;
+}
+
+.payment-options .form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.payment-options .form-check-input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.payment-options .form-check-label {
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.payment-method-wrapper {
+  margin-left: 22px;
+  border-left: 3px solid #f2f2f2;
+  padding-left: 15px;
+}
+
+.bank-info,
+.wallet-options {
+  animation: fadeIn 0.25s ease;
+}
+
+.wallet-item {
+  background: #fff;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.wallet-item:hover {
+  transform: translateY(-2px);
+  border-color: #dc3545 !important;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15);
+}
+
+/* ===== SUMMARY CARD ===== */
+.checkout-summary {
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff, #fff6f6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.checkout-summary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-summary h5 {
+  color: #dc3545;
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+
+.checkout-summary hr {
+  margin: 12px 0;
+  border-color: #ddd;
+}
+
+.checkout-summary .order-items {
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.checkout-summary .order-items::-webkit-scrollbar {
+  width: 5px;
+}
+.checkout-summary .order-items::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 6px;
+}
+
+/* ===== TEXT STYLING ===== */
+.checkout-summary p,
+.checkout-summary div,
+.checkout-summary span {
+  font-size: 16px;
+}
+
+.checkout-summary .fw-bold {
+  font-size: 18px;
+}
+
+.checkout-summary .fs-5 {
+  font-size: 1.25rem !important;
+}
+
+.checkout-summary .total {
+  background: #ffeaea;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+/* ===== BUTTON ===== */
+.btn-danger {
+  background: #dc3545;
+  border: none;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.btn {
+  font-size: 17px;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

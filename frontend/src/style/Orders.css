@@ -1,0 +1,30 @@
+.orders-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.orders-page .card {
+  border-radius: 14px;
+}
+
+.orders-page table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.nav-tabs .nav-link.active {
+  background: #dc3545 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.nav-tabs .nav-link {
+  color: #555;
+  font-weight: 500;
+  border: none;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #dc3545;
+}

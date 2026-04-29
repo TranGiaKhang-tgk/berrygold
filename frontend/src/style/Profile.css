@@ -1,0 +1,55 @@
+.profile-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Card hồ sơ */
+.profile-page .card {
+  max-width: 800px;
+  margin: auto;
+  border-radius: 14px;
+  padding: 25px;
+}
+
+/* Tiêu đề */
+.profile-page h4 {
+  border-left: 4px solid #dc3545;
+  padding-left: 12px;
+}
+
+/* Avatar */
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Input */
+.profile-page .form-control,
+.profile-page .form-select {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Focus input */
+.profile-page .form-control:focus,
+.profile-page .form-select:focus {
+  border-color: #dc3545;
+  box-shadow: none;
+}
+
+/* Button */
+.profile-page .btn-danger {
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Hover button */
+.profile-page .btn-danger:hover {
+  background: #c82333;
+}

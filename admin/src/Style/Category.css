@@ -1,0 +1,104 @@
+.category {
+  padding: 40px 30px;
+  background: #fff;
+  min-width: 270px;
+  height: 100vh; /* chiếm full chiều cao khung nhìn */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* ✅ ẩn hoàn toàn thanh kéo */
+}
+
+/* Ẩn scrollbar ở mọi trình duyệt */
+.category::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.category {
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* ----- TIÊU ĐỀ DANH MỤC ----- */
+.category-title {
+  color: var(--red);
+  font-weight: 800;
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+/* ----- DANH SÁCH MENU ----- */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+/* ----- ITEM ----- */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.05rem;
+  white-space: nowrap; /* không cho chữ xuống dòng */
+}
+
+.menu-item:hover {
+  background: var(--red);
+  color: #fff;
+  transform: translateX(4px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
+}
+
+/* ----- ICON ----- */
+.icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ----- TRẠNG THÁI ACTIVE ----- */
+.menu-item.active {
+  background: var(--red);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
+  transform: translateX(4px);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.05rem;
+  text-decoration: none; /* bỏ gạch chân link */
+  transition: all 0.25s ease;
+}
+
+.menu-item:hover {
+  background: var(--red);
+  color: white;
+  transform: translateX(4px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
+}
+
+.menu-item.active {
+  background: var(--red);
+  color: white;
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
+}

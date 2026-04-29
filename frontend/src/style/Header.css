@@ -1,0 +1,293 @@
+/* ======= Header tổng thể ======= */
+.header-area {
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ======= Thanh trên cùng ======= */
+.top-bar {
+  background: #000;
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 8px 0;
+}
+
+.top-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.top-links a:hover {
+  color: #ffd700;
+}
+
+/* ======= Logo + Search + Icons ======= */
+.middle-bar {
+  background: linear-gradient(90deg, #ff3d3d, #ff6b6b);
+  padding: 20px 0;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.logo-icon {
+  background: white;
+  color: #ff3d3d;
+  border-radius: 8px;
+  padding: 0 8px;
+  font-weight: 900;
+}
+
+/* ======= Ô tìm kiếm ======= */
+.search-box input {
+  border: none;
+  box-shadow: none;
+  height: 45px;
+  font-size: 1rem;
+  padding: 0 12px;
+}
+
+.search-box button {
+  background: #222;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0 18px;
+  font-size: 1rem;
+  height: 45px;
+}
+
+.search-box button:hover {
+  background: #ff6b6b;
+}
+
+/* ======= Icon (giỏ hàng, đơn hàng, hỏi đáp) ======= */
+.icons .icon-item {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.icons .icon-item:hover {
+  color: #fffacd;
+  transform: translateY(-2px);
+}
+
+.icons .icon-item svg {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+/* ==== BADGE (SỐ GIỎ HÀNG) ==== */
+.cart-badge {
+  position: absolute;
+  top: -6px;              
+  right: -8px;
+  background: #ff3d3d;
+  color: #fff;
+  font-size: 0.7rem;      
+  font-weight: 700;
+  padding: 1px 5px;       
+  border-radius: 999px;   
+  min-width: 16px;        
+  text-align: center;
+  line-height: 1.2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  pointer-events: none;   
+  transform: translate(25%, -25%); 
+}
+
+/* 🔹 hiệu ứng nhẹ khi số thay đổi */
+@keyframes popBadge {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.cart-badge.animate {
+  animation: popBadge 0.3s ease;
+}
+
+/* ======= FIX DROPDOWN Z-INDEX ======= */
+.header-area {
+  position: relative;
+  z-index: 10;
+}
+
+.top-bar {
+  z-index: 1000;
+  position: relative;
+}
+
+.dropdown-menu {
+  z-index: 2000 !important;
+  background: #fff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  min-width: 180px;
+
+  margin-top: 6px;   /* 👈 giảm lại */
+  right: 0 !important;
+
+  overflow: hidden;  /* 👈 QUAN TRỌNG: hết lồi */
+}
+
+/* Tùy chỉnh hiển thị item */
+.dropdown-item {
+  color: #333 !important;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa !important;
+  color: #dc3545 !important;
+}
+
+
+/* ======= Responsive ======= */
+@media (max-width: 992px) {
+  .middle-bar {
+    padding: 15px 0;
+  }
+
+  .logo {
+    font-size: 1.9rem;
+  }
+
+  .search-box input,
+  .search-box button {
+    height: 42px;
+  }
+
+  .icons .icon-item svg {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .icons .icon-item {
+    margin: 8px;
+  }
+
+  .search-box {
+    margin-top: 10px;
+  }
+}
+
+/* ======= PC lớn (>=1200px) ======= */
+@media (min-width: 1200px) {
+  .top-bar {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+
+  .logo {
+    font-size: 2.6rem;
+  }
+
+  .search-box input,
+  .search-box button {
+    height: 50px;
+    font-size: 1.05rem;
+  }
+
+  .icons .icon-item svg {
+    font-size: 1.8rem;
+  }
+
+  .icons .icon-item {
+    font-size: 1rem;
+    margin-left: 30px;
+  }
+}
+.promo-bar {
+  background: linear-gradient(90deg, #ff0000, #ff6600);
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  padding: 6px 0;
+  font-weight: 500;
+}
+.promo-bar {
+  background: linear-gradient(90deg, #ff0000, #ff6600);
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.promo-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: chạy 20s linear infinite;
+  font-weight: 600;
+  padding: 8px 0;
+  font-size: 18px; /* 👈 CHỮ TO HƠN */
+}
+
+@keyframes chạy {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* HEADER */
+.header-area {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* WRAPPER */
+.banner-wrapper {
+  position: relative;
+}
+
+/* LOGO TO ĐÈ BANNER */
+.big-logo-banner {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 100px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.85);
+
+  z-index: 10;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* HIỆU ỨNG ĐẸP HƠN */
+.big-logo-banner {
+  text-shadow: 0 0 20px rgba(255,255,255,0.6);
+  letter-spacing: 3px;
+}

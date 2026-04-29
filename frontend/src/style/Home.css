@@ -1,0 +1,244 @@
+.home-page {
+  background: #f8f9fa;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+/* === SIDEBAR === */
+.category-sidebar {
+  border-radius: 10px;
+  min-width: 270px;   
+  max-width: 280px;   
+  background: #fff;
+  margin-right: 25px;  
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 14px 18px;
+}
+
+.category-sidebar ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+.category-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  white-space: nowrap;      
+  overflow: hidden;          
+  text-overflow: ellipsis;  
+  width: 100%;                
+}
+
+.category-link span {
+  flex-shrink: 0;             /* icon không co lại */
+  margin-right: 8px;
+}
+
+.category-link:hover {
+  background: #ffe6e9;
+  color: #dc3545;
+  transform: translateX(3px);
+}
+
+/* === MAIN BANNER === */
+.main-banner {
+  background: linear-gradient(90deg, #ff3d3d, #ff6b6b);
+  height: 280px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  color: #fff;
+}
+
+.main-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+.banner-text {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  color: #fff ;
+}
+
+/* === PRODUCT DEMO === */
+.product-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-img-wrapper {
+  background: #fff;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-img-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-name {
+  font-size: 0.9rem;
+  color: #222;
+  margin-bottom: 6px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.product-price {
+  font-size: 1rem;
+}
+
+
+@media (min-width: 768px) {
+  .home-page .col-md-9,
+  .home-page .col-lg-10 {
+    padding-left: 70px !important; /* ✅ chừa khoảng giữa 2 cột */
+  }
+}
+
+/* ===== FIX COMPARE SIDEBAR ===== */
+/* ===== SO SÁNH = DANH MỤC ===== */
+.compare-sidebar {
+  border-radius: 10px;
+
+  min-width: 270px;      /* 🔥 giống sidebar */
+  max-width: 280px;      /* 🔥 giống sidebar */
+  width: 100%;
+
+  background: #fff;
+  margin-right: 25px;    /* 🔥 giống sidebar */
+  margin-top: 15px;
+
+  padding: 14px 18px;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* tiêu đề */
+.compare-sidebar h6 {
+  color: #dc3545;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* item */
+.compare-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* tên */
+.compare-name {
+  font-size: 0.9rem;
+  color: #333;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* nút x */
+.compare-item button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+/* nút chính */
+.compare-btn-main {
+  width: 100%;
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 7px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* nút clear */
+.clear-btn {
+  width: 100%;
+  background: gray;
+  color: white;
+  border: none;
+  padding: 6px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.banner-wrapper {
+  position: relative;
+}
+
+.banner-wrapper {
+  position: relative;
+}
+
+/* ===== LOGO BAN ĐẦU ===== */
+/* ===== BAN ĐẦU (TRONG BANNER) ===== */
+.big-logo-banner {
+  position: absolute; /* 🔥 nằm trong banner */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+
+  font-size: 130px;
+  font-weight: 900;
+  color: #000;
+
+  text-shadow:
+    0 0 5px rgba(255,255,255,0.8),
+    0 0 10px rgba(255,255,255,0.7),
+    0 0 20px rgba(255,255,255,0.6);
+
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
+
+  transition: none;
+}
+
+/* ===== KHI SCROLL ===== */
+.big-logo-banner.run {
+  position: fixed; /* 🔥 nhảy ra màn hình */
+
+  top: 140px;
+  left: 90px;
+
+  transform: scale(1);
+  font-size: 40px;
+
+  z-index: 999;
+
+  text-shadow:
+    0 0 3px rgba(255,255,255,0.6),
+    0 0 6px rgba(255,255,255,0.4);
+}

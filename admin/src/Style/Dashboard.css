@@ -1,0 +1,148 @@
+.dashboard-container {
+  padding: 50px 60px;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 35px;
+}
+
+/* ======================== THẺ THỐNG KÊ ======================== */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.stat-card {
+  border-radius: 12px;
+  padding: 36px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  cursor: pointer;
+
+  /* 🔥 FIX QUAN TRỌNG */
+  background: #fff;
+  color: #222;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+}
+
+.stat-card h6 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #666;
+}
+
+.stat-card h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #111;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #888;
+}
+
+/* ===== CARD MÀU ===== */
+.stat-card.red {
+  background: var(--red);
+  color: #fff;
+}
+.stat-card.orange {
+  background: var(--orange);
+  color: #fff;
+}
+.stat-card.blue {
+  background: var(--blue);
+  color: #fff;
+}
+.stat-card.green {
+  background: var(--green);
+  color: #fff;
+}
+.stat-card.purple {
+  background: var(--purple);
+  color: #fff;
+}
+.stat-card.gray {
+  background: #6c757d;
+  color: #fff;
+}
+
+/* text trong card màu */
+.stat-card.red h6,
+.stat-card.orange h6,
+.stat-card.blue h6,
+.stat-card.green h6,
+.stat-card.purple h6,
+.stat-card.gray h6,
+.stat-card.red p,
+.stat-card.orange p,
+.stat-card.blue p,
+.stat-card.green p,
+.stat-card.purple p,
+.stat-card.gray p {
+  color: rgba(255,255,255,0.85);
+}
+
+.stat-card.red h2,
+.stat-card.orange h2,
+.stat-card.blue h2,
+.stat-card.green h2,
+.stat-card.purple h2,
+.stat-card.gray h2 {
+  color: #fff;
+}
+
+/* ======================== COUPON ======================== */
+.coupon-box {
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 500px;
+}
+
+.coupon-box h4 {
+  margin-bottom: 15px;
+}
+
+.coupon-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.coupon-box button {
+  width: 100%;
+  padding: 10px;
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.coupon-box button:hover {
+  background: #e60023;
+}
+
+/* ======================== NO DATA ======================== */
+.no-data {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+}

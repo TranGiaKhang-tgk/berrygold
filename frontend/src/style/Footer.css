@@ -1,0 +1,286 @@
+/* ====== VÙNG CHUNG ====== */
+.footer-area {
+  background: linear-gradient(180deg, #111, #0b0b0b);
+  color: #ddd;
+  font-family: "Segoe UI", sans-serif;
+  padding: 70px 5vw 25px;
+  line-height: 1.8;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ====== BỐ CỤC CHÍNH (giãn full width) ====== */
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  column-gap: 60px; 
+  row-gap: 30px;
+  max-width: 1600px; 
+  margin: 0 auto;
+}
+
+/* ====== LOGO ====== */
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo .logo-icon {
+  background: #fff;
+  color: #ff3d3d;
+  font-weight: 900;
+  font-size: 2.5rem;
+  border-radius: 6px;
+  padding: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo .logo-text {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+
+/* ====== MÔ TẢ ====== */
+.footer-desc {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 14px 0 25px;
+  color: #ccc;
+  max-width: 95%;
+}
+
+/* ====== LIÊN HỆ ====== */
+.footer-contact {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-contact li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-contact li:hover {
+  color: #fff;
+}
+
+.hotline {
+  color: #ffc107;
+  font-weight: 700;
+}
+
+/* ====== TIÊU ĐỀ ====== */
+.footer-title {
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 0.6px;
+  border-left: 4px solid #ff3d3d;
+  padding-left: 10px;
+}
+
+/* ====== LINK ====== */
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 8px;
+  transition: color 0.3s ease, padding-left 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #ff4b4b;
+  padding-left: 6px;
+}
+
+/* ====== SOCIAL ICON ====== */
+.social-links {
+  margin-top: 12px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff3d3d;
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 12px;
+  font-size: 1.25rem;
+  box-shadow: 0 0 8px rgba(255, 61, 61, 0.4);
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #fff;
+  color: #ff3d3d;
+  transform: translateY(-3px);
+}
+
+/* ====== PHƯƠNG THỨC THANH TOÁN ====== */
+.payment-methods {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.payment-methods span {
+  background: #1c1c1c;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.payment-methods span:hover {
+  background: #ff3d3d;
+  border-color: #ff3d3d;
+}
+
+/* ====== DÒNG DƯỚI ====== */
+.footer-bottom {
+  border-top: 1px solid #222;
+  background: #0a0a0a;
+  padding: 24px 5vw 14px;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-bottom p {
+  margin: 4px 0;
+  color: #aaa;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+  .footer-area {
+    padding: 45px 6vw 10px;
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 40px;
+  }
+
+  .footer-logo {
+    font-size: 1.9rem;
+    justify-content: center;
+  }
+
+  .footer-title {
+    text-align: center;
+    border-left: none;
+    border-bottom: 2px solid #ff3d3d;
+    display: inline-block;
+    padding: 0 0 6px;
+    margin-bottom: 12px;
+  }
+
+  .footer-desc {
+    text-align: center;
+    margin: 12px auto 20px;
+  }
+
+  .social-links,
+  .payment-methods {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-area {
+    padding: 35px 7vw 8px;
+    font-size: 0.9rem;
+  }
+
+  .footer-logo {
+    font-size: 1.6rem;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .footer-desc {
+    font-size: 0.9rem;
+  }
+
+  .social-links a {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  .payment-methods span {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+}
+
+/* ====== PC LỚN (>=1200px) ====== */
+@media (min-width: 1200px) {
+  .footer-area {
+    font-size: 1.05rem;
+    padding: 90px 8vw 35px;
+  }
+
+  .footer-main {
+    column-gap: 80px;
+    max-width: 1800px;
+  }
+
+  .footer-logo {
+    font-size: 2.4rem;
+  }
+
+  .footer-title {
+    font-size: 1.25rem;
+  }
+
+  .footer-links a {
+    font-size: 1.05rem;
+  }
+
+  .footer-contact li {
+    font-size: 1.05rem;
+  }
+
+  .footer-bottom {
+    font-size: 1rem;
+    padding: 30px 8vw 14px;
+  }
+}

@@ -1,0 +1,90 @@
+/* 🎨 ========== BIẾN CHUNG ========== */
+:root {
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --blue: #0d6efd;
+  --green: #198754;
+  --purple: #6f42c1;
+  --gray: #6c757d;
+  --bg: #f8f9fa;
+  --radius: 14px;
+  --shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 🧱 ========== CƠ BẢN ========== */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* ❌ không cho scroll toàn trang */
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: #222;
+}
+
+/* 🧭 ========== LAYOUT TỔNG ========== */
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Phần nội dung chính (bên dưới Header) */
+.admin-body {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 80px); /* trừ chiều cao header (khoảng 80px) */
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* Cột trái (Category) */
+.left-panel,
+.category {
+  width: 280px;
+  background: #fff;
+  border-right: 1px solid #e0e0e0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.03);
+  height: 100%;
+  flex-shrink: 0;
+  overflow: hidden; /* ✅ Không cho thanh cuộn xuất hiện */
+}
+
+/* Cột phải (Dashboard, Order, Product...) */
+.right-panel,
+.content {
+  flex: 1;
+  overflow-y: auto; /* ✅ Chỉ phần nội dung cuộn được */
+  overflow-x: hidden;
+  background: var(--bg);
+  padding-bottom: 50px; /* tránh dính mép */
+  font-size: 30px;
+}
+
+/* ========== SCROLL TÙY CHỈNH ========== */
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+.content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+.content::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* ========== TIỆN ÍCH ========== */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
